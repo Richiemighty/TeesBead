@@ -15,11 +15,15 @@ body {
 
 /* Header styling */
 header {
-    background-color: #c9b9a2; /* Green background */
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ffa751, #ffe259, #7ef9ff); /* Vibrant gradient background */
     color: white; /* White text */
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    font-family: 'Arial', sans-serif; /* Modern font style */
+    font-size: 24px; /* Larger font size */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Subtle text shadow for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
 }
 
 header h1 {
@@ -197,3 +201,43 @@ section {
 }
 
 
+
+
+
+.social-icons {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    display: flex;
+    flex-direction: column; /* Stack the icons vertically */
+    gap: 15px; /* Space between the icons */
+    z-index: 1000; /* Ensure icons stay on top */
+}
+.social-icons a{
+    text-decoration: none;
+}
+.whatsapp-icon, .tiktok-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px; /* Size of the icons */
+    color: white; /* Icon color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+}
+
+.whatsapp-icon {
+    background-color: #25D366; /* WhatsApp green */
+}
+
+.tiktok-icon {
+    background-color: #000000; /* TikTok black */
+}
+
+.whatsapp-icon:hover, .tiktok-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
