@@ -11,6 +11,7 @@
     <meta content="" name="keywords">  
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="tee-removebg-preview.png">
+    <!-- <link rel="icon" href="tee.png"> -->
 </head>
 
 <body>
@@ -31,10 +32,42 @@
 
     <!-- Home Section -->
     <section id="home">
-        <h2>Crafting Style with Every Bead</h2>
-        <p>Discover beautiful, handcrafted bead jewelry that expresses your unique style.</p>
-    </section>
+        <video autoplay muted loop id="background-video">
+            <source src="image/IMG_8872.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h2>Crafting Style with Every Bead</h2>
+            <p>Discover beautiful, handcrafted bead jewelry that expresses your unique style.</p>
 
+            <a href="#showcase" class="btn-showcase">View Our Work</a>
+
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("background-video");
+            video.playbackRate = 0.5; // Adjust the playback speed (0.5 = half speed)
+        });
+    </script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
+    
+    
     <!-- About Us Section -->
     <section id="about">
         <h2>About Us</h2>
@@ -55,7 +88,7 @@
     
     <!-- Products Section -->
     <section id="products">
-        <h2>Our Products</h2>
+        <h2>What We Do</h2>
 
         <!-- Product Grid -->
         <div class="product-grid">
@@ -102,6 +135,41 @@
         </div>
     </section>
 
+
+    <section id="showcase">
+        <h2>Our Works</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="image/IMG_1799.jpg" alt="Beaded Bracelet">
+            </div>
+            <div class="gallery-item">
+                <img src="image/IMG_3079.jpg" alt="Elegant Waist Beads">
+            </div>
+            <div class="gallery-item">
+                <img src="image/IMG_6819.jpg" alt="Colorful Necklace">
+            </div>
+            <div class="gallery-item">
+                <img src="image/IMG_3784.jpg" alt="Custom Jewelry">
+            </div>
+            <div class="gallery-item">
+                <img src="image/IMG_5855.jpg" alt="Beaded Accessories">
+            </div>
+            <div class="gallery-item">
+                <img src="image/IMG_6589.jpg" alt="Handmade Earrings">
+            </div>
+            <div class="gallery-item">
+                <img src="image/IMG_7348.jpg" alt="Handmade Earrings">
+            </div>
+            <div class="gallery-item">
+                <img src="image/IMG_6822.jpg" alt="Handmade Earrings">
+            </div>
+            <div class="gallery-item">
+                <img src="image/IMG_4643 (1).jpg" alt="Handmade Earrings">
+            </div>
+        </div>
+    </section>
+    
+
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
@@ -123,8 +191,13 @@
         <a href="https://www.tiktok.com/@teesbead?_t=ZM-8ssEKW2rI17&_r=1" target="_blank" class="tiktok-icon">
             <i class="fab fa-tiktok"></i>
         </a>
+    
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com/tees_bead/" target="_blank" class="instagram-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
     </div>
-            
+                
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Tees Bead. All rights reserved.</p>

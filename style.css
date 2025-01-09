@@ -74,6 +74,64 @@ nav ul li a:hover {
     }
 }
 
+
+
+
+
+
+
+
+
+/* Home Section */
+#home {
+    position: relative;
+    height: 75vh; /* Full viewport height */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Background Video */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the background */
+    z-index: -100; /* Place video behind content */
+}
+
+/* Content Overlay */
+#home .content {
+    position: relative;
+    z-index: 10;
+    height: fit-content;
+    margin-top: 90px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add depth */
+}
+
+#home h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+
+
+
 section {
     padding: 40px;
     margin: 0 auto;
@@ -204,19 +262,21 @@ section {
 
 
 
+
+.social-icons a{
+    text-decoration: none;
+}
 .social-icons {
     position: fixed;
     bottom: 20px; /* Distance from the bottom */
     right: 20px; /* Distance from the right */
     display: flex;
     flex-direction: column; /* Stack the icons vertically */
-    gap: 15px; /* Space between the icons */
+    gap: 10px; /* Space between the icons */
     z-index: 1000; /* Ensure icons stay on top */
 }
-.social-icons a{
-    text-decoration: none;
-}
-.whatsapp-icon, .tiktok-icon {
+
+.whatsapp-icon, .tiktok-icon, .instagram-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -229,6 +289,7 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
 }
 
+/* Specific background colors for each icon */
 .whatsapp-icon {
     background-color: #25D366; /* WhatsApp green */
 }
@@ -237,7 +298,105 @@ section {
     background-color: #000000; /* TikTok black */
 }
 
-.whatsapp-icon:hover, .tiktok-icon:hover {
+.instagram-icon {
+    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram gradient */
+}
+
+/* Hover effects for all icons */
+.whatsapp-icon:hover, .tiktok-icon:hover, .instagram-icon:hover {
     transform: scale(1.1); /* Slight zoom on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+
+
+
+
+/* Style for the button */
+.btn-showcase {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff5733; /* Vibrant button color */
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-showcase:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+
+
+
+/* Showcase Section */
+#showcase {
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #f0f8ff, #e6e6fa); /* Soft gradient background */
+    text-align: center;
+}
+
+#showcase h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Gallery Items */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fit nicely */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Further zoom effect on hover */
+}
+
+/* Fade-In Animation */
+.gallery-item {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
